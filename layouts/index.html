@@ -1,0 +1,12 @@
+{{ define "main" }}
+  {{ .Content }}
+  <div class="apercu-post" role="list">
+    {{ range (where .Site.RegularPages "Section" "blog") | first 3 -}}
+      <a href="{{ .Permalink }}" role="listitem">
+        <h1 class="list_post_title"><span class="a-nude">{{ .Title }}</span></h1>
+      </a>
+      {{ partial "main/meta.html" . }}
+      <div class="line"></div>
+    {{ end -}}
+  </div>
+{{ end }}

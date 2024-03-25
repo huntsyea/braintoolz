@@ -1,0 +1,10 @@
+<h2 class="list_post_info">
+  {{- with .Params.categories -}}
+    {{- range $index, $category := . -}}
+      {{ if gt $index 0 }}, {{ end -}}
+      <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a>
+    {{- end }}
+  {{- end }}
+   ✷ 
+  {{ .Date.Format "January 2, 2006" }}
+</h2>

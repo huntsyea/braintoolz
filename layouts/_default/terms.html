@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <h1 class="custom-pages-title">{{ .Title }}</h1>
+  <div class="authors-list">
+    {{ range .Pages -}}
+      <a href="{{ .Permalink }}">
+        <h2 class="list_post_title">
+          <span class="a-nude"><span class="desktop-star">&#10040;</span> {{ .Title }} <span class="desktop-star">&#10040;</span></span>
+        </h2>
+      </a>
+    {{ end -}}
+  </div>
+{{ end }}

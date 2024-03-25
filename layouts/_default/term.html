@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <h1 class="custom-pages-title">{{ .Title }}</h1>
+  <table class="archives-table">
+    {{ range .Pages -}}
+      <tr>
+        <td>
+          <a href="{{ .Permalink }}">
+            <h2 class="list_post_title"><span class="a-nude">{{ .Title }}</span></h2>
+          </a>
+        </td>
+        <td class="archives-date">
+          <h2 class="list_post_title">&#10040; {{.Date.Format "01/02/2006"}}</h2>
+        </td>
+      </tr>
+    {{ end -}}
+  </table>
+  <div class="line"></div>
+{{ end }}

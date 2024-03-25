@@ -1,0 +1,22 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  <div>
+    <span class="post_date"><b>Author:</b> {{ .Params.author }}</span>
+  </div>
+  <div>
+    <span class="post_date"><b>Last Updated:</b> {{ dateFormat ( or $.Site.Params.dateFormat "January 2, 2006" ) $.Page.Params.LastMod }}</span>
+  </div>
+  <div>
+  <b>Read Time:</b> {{ .ReadingTime }} minutes</span>
+  </div>
+  <div><span></span></div>
+  <div class="page-typo-type">
+    {{/*<label class="typo-dys-label" aria-label="typo sans-serif" for="typo-dys"></label>*/}}
+  </div> 
+
+  {{ .Content }}
+  <div class="post_footer">
+    {{ partial "main/meta.html" . }}
+  </div>
+  <div class="line"></div>
+{{ end }}

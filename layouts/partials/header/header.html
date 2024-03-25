@@ -1,0 +1,18 @@
+<header>
+  <div class="site_title" role="heading" aria-level="1">
+    <a href="{{ "/" | absURL }}" class="site-title">
+      {{ .Site.Params.Title }}
+    </a>
+  </div>
+  <nav>
+    {{ range .Site.Menus.main -}}
+    <a href="{{ .URL }}" class="pages_links">
+      <span class="pages_names">{{ .Name }}</span>
+    </a>
+    {{ end -}}
+  </nav>
+  <div class="site_functions">
+    <label class="dark-mode-label" aria-label="Night Mode" for="dark-mode"></label>    
+    <label class="typo-plus-label" aria-label="Change font size" for="typo-plus"></label>
+  </div>
+</header>

@@ -1,0 +1,7 @@
+{{ $dark_mode := resources.Get "js/dark-mode.js" }}
+{{ $typo_plus := resources.Get "js/typo-plus.js" }}
+{{ $typo_dys := resources.Get "js/typo-dys.js" }}
+{{ $js := slice $dark_mode $typo_plus $typo_dys | resources.Concat "js/bundle.js" }}
+<script>
+  {{ $js.Content | safeJS }}
+</script>
