@@ -1,8 +1,10 @@
 {{ define "main" }}
   <h1>{{ .Title }}</h1>
+  <div><button class="tinylytics_kudos"></button></div>
   <div>
     <span class="post_date"><b>Author:</b> {{ .Params.author }}</span>
   </div>
+
   <div>
     <span class="post_date"><b>Last Updated:</b> {{ dateFormat ( or $.Site.Params.dateFormat "January 2, 2006" ) $.Page.Params.LastMod }}</span>
   </div>
