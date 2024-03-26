@@ -50,8 +50,7 @@
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' https://embed.reddit.com/widgets.js http://tinylytics.app/embed/tAXy3zTXi7xDk_sQLY7g.js; img-src 'self' http://tinylytics.app; connect-src 'self' http://tinylytics.app; style-src 'self'; font-src 'self'"
-    X-Frame-Options = "SAMEORIGIN"
+Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://embed.reddit.com/widgets.js; img-src 'self'; connect-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self'"    X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin"
     Feature-Policy = "geolocation 'self'"
     Cache-Control= '''
