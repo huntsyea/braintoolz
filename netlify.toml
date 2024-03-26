@@ -50,7 +50,7 @@
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'sha256-m5CcmQJC047Y3QkIQNOo0RS3EjbX+d3NdhDyDkF19SU=' 'nonce-dXNlcj0iaGVsbG8iLGRvbWFpbj0iaGVua3ZlcmxpbmRlLmNvbSIsZG9jdW1lbnQud3JpdGUodXNlcisiQCIrZG9tYWluKTs=' 'sha256-aWZ3y/RxbBYKHXH0z8+8ljrHG1mSBvyzSfxSMjBSaXk=' 'unsafe-inline' https://tinylytics.app/ https://embed.reddit.com/; style-src 'self' https://fonts.googleapis.com; style-src-attr 'self' 'unsafe-inline' https://tinylytics.app/ https://embed.reddit.com/; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; manifest-src 'self'"
+    Content-Security-Policy = "default-src 'self' https://tinylytics.app/ https://embed.reddit.com/; script-src 'self' 'unsafe-inline' 'sha256-m5CcmQJC047Y3QkIQNOo0RS3EjbX+d3NdhDyDkF19SU=' 'nonce-dXNlcj0iaGVsbG8iLGRvbWFpbj0iaGVua3ZlcmxpbmRlLmNvbSIsZG9jdW1lbnQud3JpdGUodXNlcisiQCIrZG9tYWluKTs=' 'sha256-aWZ3y/RxbBYKHXH0z8+8ljrHG1mSBvyzSfxSMjBSaXk=' https://tinylytics.app/ https://embed.reddit.com/; style-src 'self' https://fonts.googleapis.com; style-src-attr 'self' 'unsafe-inline' https://tinylytics.app/ https://embed.reddit.com/; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; manifest-src 'self'"
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin"
     Feature-Policy = "geolocation 'self'"
